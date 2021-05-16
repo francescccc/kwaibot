@@ -16,7 +16,7 @@ api = tweepy.API(auth)
 
 
 
-
+# xskm
 
 
 
@@ -28,7 +28,7 @@ def tweetsend2():
         print(tweet.full_text)
         print(tweet.user.id)
         recipient_id = tweet.user.id
-        text = "Oiii, você poderia por favor dar um olhada no meu fixado? Eu to passando por umas situações meio dificeis, e em 3 minutos você poderia me ajudar sem gastar nada, por favor, me ajuda muito"
+        text = "Oiiie, você poderia por favor dar um olhada no meu fixado? Eu to passando por umas situações meio dificeis, e em 3 minutos você poderia me ajudar sem gastar nada, por favor, me ajuda muito"
         try:
             number = ('1',
             '2',
