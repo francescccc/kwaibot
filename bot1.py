@@ -23,7 +23,7 @@ api = tweepy.API(auth)
 
 def tweetsend2():
     print("oi")
-    public_tweets = api.search(q='bts -filter:retweets', count=1, since="2018-06-09", tweet_mode="extended", geocode='-11.800399,-48.339055,1000km')
+    public_tweets = api.search(q='bts -filter:retweets', count=1, since="2018-06-09", tweet_mode="extended", geocode='-11.800399,-48.339055,1800km')
     for tweet in public_tweets:
         print(tweet.full_text)
         print(tweet.user.id)
