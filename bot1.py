@@ -33,12 +33,16 @@ def tweetsend2():
             number = ('1',
             '2',
             '3',
+            '4'
+            '5',
+            '6',
+            '7',
 
             )
             numberident = (random.choice(number))
             print(numberident)
             api.send_direct_message(recipient_id, text)
-            numberchance = "2" in numberident
+            numberchance = "5" in numberident
             if numberchance == True:
                 try:
                     api.create_friendship(tweet.user.id)
@@ -52,4 +56,4 @@ def tweetsend2():
 while True:
             tweetsend2()
             import time
-            time.sleep(130)
+            time.sleep(180)
