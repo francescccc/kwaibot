@@ -23,32 +23,14 @@ api = tweepy.API(auth)
 
 def tweetsend2():
     print("oi")
-    public_tweets = api.search(q='jimin -filter:retweets', count=1, since="2018-06-09", tweet_mode="extended", geocode='-11.800399,-48.339055,1800km')
+    public_tweets = api.search(q='bts -filter:retweets', count=1, since="2018-06-09", tweet_mode="extended", geocode='-11.800399,-48.339055,1800km')
     for tweet in public_tweets:
         print(tweet.full_text)
         print(tweet.user.id)
         recipient_id = tweet.user.id
         text = "Oie, eu sei que é chato pedir, mas você poderia dar uma olhada no meu fixado? Eu to passando por umas situações meio complicadas, se você puder me ajudar, eu ficaria muito grata" + u'\U0001F684'
         try:
-            number = ('1',
-            '2',
-            '3',
-            '4',
-            '5',
-            '6',
-            '7',
-
-
-            )
-            numberident = (random.choice(number))
-            print(numberident)
             api.send_direct_message(recipient_id, text)
-            numberchance = "5" in numberident
-            if numberchance == True:
-                try:
-                    api.create_friendship(tweet.user.id)
-                except:
-                    print("deu erro")
         except:
             pass
 
